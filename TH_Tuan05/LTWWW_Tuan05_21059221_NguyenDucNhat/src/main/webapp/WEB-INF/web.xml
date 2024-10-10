@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>LTWWW_Tuan05_21059221_NguyenDucNhat</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>DanhSachDienThoaiServlet</servlet-name>
+		<servlet-class>lab5.servlet.DanhSachDienThoaiServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>InsertDienThoaiServlet</servlet-name>
+		<servlet-class>lab5.servlet.InsertDienThoaiServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UpdateDienThoaiServlet</servlet-name>
+		<servlet-class>lab5.servlet.UpdateDienThoaiServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DeleteDienThoaiServlet</servlet-name>
+		<servlet-class>lab5.servlet.DeleteDienThoaiServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>EditDienThoaiServlet</servlet-name>
+		<servlet-class>lab5.servlet.EditDienThoaiServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DanhSachDienThoaiServlet</servlet-name>
+		<url-pattern>/danhSachDienThoai</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>InsertDienThoaiServlet</servlet-name>
+		<url-pattern>/InsertDienThoaiServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateDienThoaiServlet</servlet-name>
+		<url-pattern>/UpdateDienThoaiServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DeleteDienThoaiServlet</servlet-name>
+		<url-pattern>/DeleteDienThoaiServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EditDienThoaiServlet</servlet-name>
+		<url-pattern>/editDienThoai</url-pattern>
+	</servlet-mapping>
+
+</web-app>
