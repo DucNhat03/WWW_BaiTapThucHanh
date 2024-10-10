@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Bai04_JSPSession</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>cart.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>productControl</display-name>
+    <servlet-name>productControl</servlet-name>
+    <servlet-class>controller.productControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>productControl</servlet-name>
+    <url-pattern>/productControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>cartControl</display-name>
+    <servlet-name>cartControl</servlet-name>
+    <servlet-class>controller.cartControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cartControl</servlet-name>
+    <url-pattern>/cartControl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeControl</display-name>
+    <servlet-name>removeControl</servlet-name>
+    <servlet-class>controller.removeControl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeControl</servlet-name>
+    <url-pattern>/removeControl</url-pattern>
+  </servlet-mapping>
+</web-app>
