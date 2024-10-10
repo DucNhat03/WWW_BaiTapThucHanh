@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>Bai03_QuanLyTinTuc_JSPs</display-name>
+	<welcome-file-list>
+		<welcome-file>danhSachTinTuc</welcome-file>
+
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>DanhSachTinTucServlet</servlet-name>
+		<servlet-class>controller.DanhSachTinTucServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DanhSachTinTucServlet</servlet-name>
+		<url-pattern>/danhSachTinTuc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ThemTinTucServlet</servlet-name>
+		<servlet-class>controller.ThemTinTucServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThemTinTucServlet</servlet-name>
+		<url-pattern>/themTinTuc</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DanhMucServlet</servlet-name>
+		<servlet-class>controller.DanhMucServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DanhMucServlet</servlet-name>
+		<url-pattern>/danhMucServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>QuanLyFormServlet</servlet-name>
+		<servlet-class>controller.QuanLyFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuanLyFormServlet</servlet-name>
+		<url-pattern>/quanLyForm</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>XoaTinTucServlet</servlet-name>
+		<servlet-class>controller.XoaTinTucServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>XoaTinTucServlet</servlet-name>
+		<url-pattern>/xoaTinTuc</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<display-name>Bai02_CartShopping_JPA_Session</display-name>
+	<welcome-file-list>
+		<welcome-file>ProductServlet</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<servlet-class>controller.AddToCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<url-pattern>/addToCart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewCartServlet</servlet-name>
+		<servlet-class>controller.ViewCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewCartServlet</servlet-name>
+		<url-pattern>/viewCart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateCartServlet</servlet-name>
+		<servlet-class>controller.UpdateCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCartServlet</servlet-name>
+		<url-pattern>/updateCart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteFromCartServlet</servlet-name>
+		<servlet-class>controller.DeleteFromCartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteFromCartServlet</servlet-name>
+		<url-pattern>/deleteFromCart</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductServlet</servlet-name>
+		<servlet-class>controller.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductServlet</servlet-name>
+		<url-pattern>/ProductServlet</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
