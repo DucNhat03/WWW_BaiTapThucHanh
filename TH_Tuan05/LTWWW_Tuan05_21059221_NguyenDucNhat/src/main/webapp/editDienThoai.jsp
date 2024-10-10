@@ -19,7 +19,7 @@
 	%>
 
 	<form action="UpdateDienThoaiServlet" method="post"
-		enctype="multipart/form-data">
+		>
 		<input type="hidden" name="maDT" value="<%=dt.getMaDT()%>">
 		Tên điện thoại: <input type="text" name="tenDT"
 			value="<%=dt.getTenDT()%>" required><br> Năm sản xuất:

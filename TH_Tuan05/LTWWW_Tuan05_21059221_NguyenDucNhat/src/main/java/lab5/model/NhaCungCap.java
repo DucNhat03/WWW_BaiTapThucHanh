@@ -1,6 +1,11 @@
 package lab5.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class NhaCungCap {
+	@Id
 	private String maNCC;
 	private String tenNCC;
 	private String diaChi;

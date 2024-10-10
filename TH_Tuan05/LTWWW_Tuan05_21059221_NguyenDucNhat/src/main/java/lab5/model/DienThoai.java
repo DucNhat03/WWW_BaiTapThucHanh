@@ -1,6 +1,11 @@
 package lab5.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class DienThoai {
+	@Id
 	private String maDT;
 	private String tenDT;
 	private int namSanXuat;

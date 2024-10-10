@@ -1,20 +1,19 @@
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import lab5.utils.ConnectDB;
-
 public class TestConnection {
-
-    public static void main(String[] args) {
-        try {
-            Connection conn = ConnectDB.getConnection();
-            if (conn != null) {
-                System.out.println("Kết nối đến cơ sở dữ liệu thành công!");
-                conn.close();  // Đóng kết nối sau khi hoàn thành
-            }
-        } catch (SQLException e) {
-            System.err.println("Kết nối đến cơ sở dữ liệu thất bại.");
-            e.printStackTrace();
-        }
-    }
+	public static void main(String[] args) {
+		try {
+			Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/quanlydienthoai", "root",
+					"sapassword");
+			if (conn != null) {
+				System.out.println("Successfully connected to the database!");
+			} else {
+				System.out.println("Failed to connect to the database.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

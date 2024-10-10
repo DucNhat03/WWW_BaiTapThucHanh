@@ -5,12 +5,7 @@
 	id="WebApp_ID" version="6.0">
 	<display-name>LTWWW_Tuan05_21059221_NguyenDucNhat</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-		<welcome-file>default.htm</welcome-file>
+		<welcome-file>ddanhSachDienThoai</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>DanhSachDienThoaiServlet</servlet-name>
@@ -36,10 +31,14 @@
 		<servlet-name>EditDienThoaiServlet</servlet-name>
 		<servlet-class>lab5.servlet.EditDienThoaiServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>QuanLyDienThoai</servlet-name>
+		<servlet-class>lab5.servlet.QuanLyDienThoai</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>DanhSachDienThoaiServlet</servlet-name>
-		<url-pattern>/danhSachDienThoai</url-pattern>
+		<url-pattern>/ddanhSachDienThoai</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
@@ -48,15 +47,21 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>UpdateDienThoaiServlet</servlet-name>
-		<url-pattern>/UpdateDienThoaiServlet</url-pattern>
+		<servlet-name>DeleteDienThoaiServlet</servlet-name>
+		<url-pattern>/xoaDienThoai</url-pattern>
 	</servlet-mapping>
+
 
 	<servlet-mapping>
-		<servlet-name>DeleteDienThoaiServlet</servlet-name>
-		<url-pattern>/DeleteDienThoaiServlet</url-pattern>
+		<servlet-name>QuanLyDienThoai</servlet-name>
+		<url-pattern>/quanLyDienThoai</url-pattern>
 	</servlet-mapping>
 
+
+	<servlet-mapping>
+		<servlet-name>UpdateDienThoaiServlet</servlet-name>
+		<url-pattern>/capNhatDienThoai</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>EditDienThoaiServlet</servlet-name>
 		<url-pattern>/editDienThoai</url-pattern>
