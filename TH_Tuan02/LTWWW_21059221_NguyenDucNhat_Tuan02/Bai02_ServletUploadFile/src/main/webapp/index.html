@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>UploadFile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<form method="POST" action="fileUpload" enctype="multipart/form-data">
+		<!-- Upload multiple files -->
+		<!-- File: <input type="file" name="file[]" multiple="multiple"/> -->
+		<h2>Upload Multi-files</h2>
+		File #1: <input type="file" name="file1" id="file1" /> <br /> 
+		File #2: <input type="file" name="file2" id="file2" /> <br /> 
+		File #3: <input type="file" name="file3" id="file3" /> <br /> 
+		File #4: <input type="file" name="file4" id="file4" /> <br /> 
+		File #5: <input type="file" name="file5" id="file5" /> <br /> </br> 
+		<input type="submit" value="Upload" name="upload" id="upload" /> 
+		<input type="reset" value="Reset" />
+	</form>
+</body>
+</html>
