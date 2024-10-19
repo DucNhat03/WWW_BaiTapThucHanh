@@ -1,0 +1,276 @@
+2024-10-19T11:01:38.562+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : Starting DemoRestApiApplication using Java 17.0.12 with PID 16912 (D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI\target\classes started by Admin in D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI)
+2024-10-19T11:01:38.564+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-10-19T11:01:38.631+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19T11:01:38.632+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19T11:01:39.549+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-19T11:01:39.603+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2024-10-19T11:01:40.226+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-10-19T11:01:40.239+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-19T11:01:40.240+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-19T11:01:40.293+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-19T11:01:40.293+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1660 ms
+2024-10-19T11:01:40.844+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-19T11:01:40.879+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-19T11:01:41.044+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@11efb1b7
+2024-10-19T11:01:41.046+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-19T11:01:41.255+07:00  WARN 16912 --- [DemoRestAPI] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+2024-10-19T11:01:41.256+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-19T11:01:41.301+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-19T11:01:41.303+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-19T11:01:41.315+07:00  INFO 16912 --- [DemoRestAPI] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19T11:01:41.335+07:00 ERROR 16912 --- [DemoRestAPI] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at iuh.exercise.DemoRestApiApplication.main(DemoRestApiApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.UnsupportedOperationException: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.forTimestampPrecision(AbstractTemporalJavaType.java:66)
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.resolveTypeForPrecision(AbstractTemporalJavaType.java:53)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.fromTemporal(InferredBasicValueResolver.java:395)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.from(InferredBasicValueResolver.java:120)
+	at org.hibernate.mapping.BasicValue.resolution(BasicValue.java:647)
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:498)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:350)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:340)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.lambda$processValueResolvers$4(InFlightMetadataCollectorImpl.java:1796)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1682)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1660)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processValueResolvers(InFlightMetadataCollectorImpl.java:1795)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1781)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+
+2024-10-19T11:02:05.179+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : Starting DemoRestApiApplication using Java 17.0.12 with PID 15948 (D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI\target\classes started by Admin in D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI)
+2024-10-19T11:02:05.182+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-10-19T11:02:05.223+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19T11:02:05.223+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19T11:02:06.207+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-19T11:02:06.266+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2024-10-19T11:02:06.947+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-10-19T11:02:06.961+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-19T11:02:06.962+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-19T11:02:07.025+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-19T11:02:07.025+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1801 ms
+2024-10-19T11:02:07.543+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-19T11:02:07.575+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-19T11:02:07.673+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6f511988
+2024-10-19T11:02:07.675+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-19T11:02:07.910+07:00  WARN 15948 --- [DemoRestAPI] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+2024-10-19T11:02:07.913+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-19T11:02:07.920+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-19T11:02:07.923+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-19T11:02:07.937+07:00  INFO 15948 --- [DemoRestAPI] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19T11:02:07.954+07:00 ERROR 15948 --- [DemoRestAPI] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at iuh.exercise.DemoRestApiApplication.main(DemoRestApiApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.UnsupportedOperationException: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.forTimestampPrecision(AbstractTemporalJavaType.java:66)
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.resolveTypeForPrecision(AbstractTemporalJavaType.java:53)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.fromTemporal(InferredBasicValueResolver.java:395)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.from(InferredBasicValueResolver.java:120)
+	at org.hibernate.mapping.BasicValue.resolution(BasicValue.java:647)
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:498)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:350)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:340)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.lambda$processValueResolvers$4(InFlightMetadataCollectorImpl.java:1796)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1682)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1660)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processValueResolvers(InFlightMetadataCollectorImpl.java:1795)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1781)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+
+2024-10-19T11:03:38.494+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : Starting DemoRestApiApplication using Java 17.0.12 with PID 7144 (D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI\target\classes started by Admin in D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI)
+2024-10-19T11:03:38.496+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-10-19T11:03:38.547+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19T11:03:38.547+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19T11:03:39.438+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-19T11:03:39.487+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2024-10-19T11:03:40.169+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-10-19T11:03:40.181+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-19T11:03:40.181+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-19T11:03:40.239+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-19T11:03:40.239+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1691 ms
+2024-10-19T11:03:40.741+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-19T11:03:40.766+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-19T11:03:40.855+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1d4875e
+2024-10-19T11:03:40.857+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-19T11:03:41.071+07:00  WARN 7144 --- [DemoRestAPI] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+2024-10-19T11:03:41.073+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-19T11:03:41.112+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-19T11:03:41.116+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-19T11:03:41.135+07:00  INFO 7144 --- [DemoRestAPI] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-19T11:03:41.163+07:00 ERROR 7144 --- [DemoRestAPI] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at iuh.exercise.DemoRestApiApplication.main(DemoRestApiApplication.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.UnsupportedOperationException: TemporalJavaType(javaType=java.sql.Date) as `jakarta.persistence.TemporalType.TIMESTAMP` not supported
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.forTimestampPrecision(AbstractTemporalJavaType.java:66)
+	at org.hibernate.type.descriptor.java.AbstractTemporalJavaType.resolveTypeForPrecision(AbstractTemporalJavaType.java:53)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.fromTemporal(InferredBasicValueResolver.java:395)
+	at org.hibernate.boot.model.process.internal.InferredBasicValueResolver.from(InferredBasicValueResolver.java:120)
+	at org.hibernate.mapping.BasicValue.resolution(BasicValue.java:647)
+	at org.hibernate.mapping.BasicValue.buildResolution(BasicValue.java:498)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:350)
+	at org.hibernate.mapping.BasicValue.resolve(BasicValue.java:340)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.lambda$processValueResolvers$4(InFlightMetadataCollectorImpl.java:1796)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1682)
+	at java.base/java.util.ArrayList.removeIf(ArrayList.java:1660)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processValueResolvers(InFlightMetadataCollectorImpl.java:1795)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1781)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+
+2024-10-19T11:06:52.556+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : Starting DemoRestApiApplication using Java 17.0.12 with PID 10932 (D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI\target\classes started by Admin in D:\Studies\HK1_Y4\WWW\MyWorkSpace\DemoRestAPI)
+2024-10-19T11:06:52.559+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-10-19T11:06:52.625+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-19T11:06:52.625+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-19T11:06:53.516+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-19T11:06:53.576+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2024-10-19T11:06:54.296+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9998 (http)
+2024-10-19T11:06:54.308+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-19T11:06:54.308+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-19T11:06:54.368+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-19T11:06:54.368+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1742 ms
+2024-10-19T11:06:54.874+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-19T11:06:54.907+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-19T11:06:55.020+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@1d4875e
+2024-10-19T11:06:55.021+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-19T11:06:56.119+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-19T11:06:56.460+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-19T11:06:56.931+07:00  WARN 10932 --- [DemoRestAPI] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-19T11:06:57.153+07:00  WARN 10932 --- [DemoRestAPI] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Multiple @RequestMapping annotations found on public org.springframework.http.ResponseEntity iuh.exercise.controllers.EmployeeController.getEmployees(java.lang.String), but only the first will be used: [@org.springframework.web.bind.annotation.PostMapping(consumes={}, headers={}, name="", params={}, path={"/employees"}, produces={}, value={"/employees"}), @org.springframework.web.bind.annotation.GetMapping(consumes={}, headers={}, name="", params={}, path={"/employees"}, produces={}, value={"/employees"})]
+2024-10-19T11:06:57.198+07:00 DEBUG 10932 --- [DemoRestAPI] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-10-19T11:06:57.312+07:00 DEBUG 10932 --- [DemoRestAPI] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**, /api/explorer/**] in 'resourceHandlerMapping'
+2024-10-19T11:06:57.357+07:00 DEBUG 10932 --- [DemoRestAPI] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-10-19T11:06:57.395+07:00 DEBUG 10932 --- [DemoRestAPI] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-10-19T11:06:57.428+07:00 DEBUG 10932 --- [DemoRestAPI] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 3 @ExceptionHandler, 0 ResponseBodyAdvice
+2024-10-19T11:06:57.731+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-19T11:06:57.783+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9998 (http) with context path '/'
+2024-10-19T11:06:57.801+07:00  INFO 10932 --- [DemoRestAPI] [restartedMain] iuh.exercise.DemoRestApiApplication      : Started DemoRestApiApplication in 5.927 seconds (process running for 6.346)
+2024-10-19T11:08:05.202+07:00  INFO 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-19T11:08:05.203+07:00  INFO 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-19T11:08:05.203+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-10-19T11:08:05.203+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-10-19T11:08:05.203+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-10-19T11:08:05.211+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2b16b0b9
+2024-10-19T11:08:05.212+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@74982aa7
+2024-10-19T11:08:05.213+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-19T11:08:05.213+07:00  INFO 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2024-10-19T11:08:05.229+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2024-10-19T11:08:05.246+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-10-19T11:08:05.260+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-10-19T11:08:05.265+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.exercise.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-10-19T11:08:05.328+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/problem+json]
+2024-10-19T11:08:05.334+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource swagger- (truncated)...]
+2024-10-19T11:08:05.359+07:00  WARN 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui/index.html.]
+2024-10-19T11:08:05.362+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-10-19T11:08:05.653+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2024-10-19T11:08:05.656+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-19T11:08:05.658+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-10-19T11:08:05.659+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.exercise.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-10-19T11:08:05.661+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/problem+json]
+2024-10-19T11:08:05.662+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource favicon. (truncated)...]
+2024-10-19T11:08:05.667+07:00  WARN 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-10-19T11:08:05.668+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-10-19T11:08:23.137+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/ap", parameters={}
+2024-10-19T11:08:23.139+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-10-19T11:08:23.142+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-10-19T11:08:23.142+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler iuh.exercise.exceptions.GlobalExceptionHandler#handleException(Exception, WebRequest)
+2024-10-19T11:08:23.143+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/problem+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/problem+json]
+2024-10-19T11:08:23.144+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ProblemDetail[type='about:blank', title='Not Found', status=404, detail='No static resource ap.', in (truncated)...]
+2024-10-19T11:08:23.148+07:00  WARN 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource ap.]
+2024-10-19T11:08:23.152+07:00 DEBUG 10932 --- [DemoRestAPI] [http-nio-9998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
