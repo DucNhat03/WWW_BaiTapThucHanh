@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- -->
+    <bean id="address01" class="entities.Address">
+        <property name="city" value="Quy Nhon"/>
+        <property name="state" value="Quang Trung"/>
+        <property name="country" value="Binh Dinh"/>
+    </bean>
+       
+     <bean id="employee01" class="entities.Employee">
+        <property name="id" value="001"></property>
+        <property name="name" value="Nguyen Duc Nhat"></property>
+        <property name="address" ref="address01"></property>
+    </bean>
+    <bean id="employee02" class="entities.Employee">
+        <constructor-arg name="id" value="003"></constructor-arg>
+        <constructor-arg name="name" value="Nguyen Duc Nhat Anh"></constructor-arg>
+        <constructor-arg name="address" ref="address01"></constructor-arg>
+    </bean>
+    
+
+</beans>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Vi du 01 --> 
+    <!--  
+    <bean id="student1" class="iuh.exercise.entities.Student">
+        <property name="id" value="001"/>
+        <property name="name" value="Nguyen Duc Nhat"/>
+    </bean>
+    -->
+    <!-- Vi du 02 -->
+    <!--  
+     <bean id="class1" class="iuh.exercise.entities.Class_">
+        <property name="classId" value="DHKTPM17ATT"/>
+        <property name="className" value="Dai hoc KTPM17ATT"/>
+    </bean>
+       
+     <bean id="student2" class="iuh.exercise.entities.Student">
+        <property name="id" value="002"></property>
+        <property name="name" value="Nguyen Duc Nhat"></property>
+        <property name="class_" ref="class1"></property>
+    </bean>
+    -->
+    <!-- Vi du 03 -->
+    <bean id="class1" class="iuh.exercise.entities.Class_">
+        <property name="classId" value="DHKTPM17ATT"/>
+        <property name="className" value="Dai hoc KTPM17ATT"/>
+    </bean>
+       
+     <bean id="student2" class="iuh.exercise.entities.Student">
+        <property name="id" value="002"></property>
+        <property name="name" value="Nguyen Duc Nhat"></property>
+        <property name="class_" ref="class1"></property>
+    </bean>
+    <bean id="student3" class="iuh.exercise.entities.Student">
+        <constructor-arg name="id" value="003"></constructor-arg>
+        <constructor-arg name="name" value="Nguyen Duc Nhat 2"></constructor-arg>
+        <constructor-arg name="class_" ref="class1"></constructor-arg>
+    </bean>
+    
+
+</beans>
